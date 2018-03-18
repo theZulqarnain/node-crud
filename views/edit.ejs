@@ -1,0 +1,12 @@
+<% include partials/header%>
+<h2>Edit Here</h2>
+
+<form action="/users/edit/" method="post">
+    <input type="hidden" value="<%= user.id%>" name="id">
+    <input type="text" name="username" value="<%= user.username%>">
+    <input type="text" name="email" value="<%= user.email%>">
+    <input type="text" name="password" value="<%= user.password%>">
+    <input type="submit">
+</form>
+
+<% include partials/footer%>

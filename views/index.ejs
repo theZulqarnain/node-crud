@@ -1,0 +1,20 @@
+<% include partials/header %>
+<h1>this is index page</h1>
+<h2><a href="/users">Add New User</a></h2>
+<table >
+    <tr>
+        <th>username</th>
+        <th>email</th>
+        <th>Actions</th>
+    </tr>
+    <% users.forEach(function(user) { %>
+    <tr>
+        <td><%- user.username%></td>
+        <td><%- user.email%></td>
+        <td><a href="/users/edit/<%= user.id%>">Edit</a> | <a href="/users/delete/<%= user.id%>">Delete</a></td>
+    </tr>
+    <% }) %>
+
+</table>
+
+<% include partials/footer %>
